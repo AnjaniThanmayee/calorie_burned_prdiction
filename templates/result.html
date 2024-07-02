@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calories Burned Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/form">Calculate Calories</a>
+        
+        <a href="/exercises">Exercises</a>
+        <a href="/why">Know Why</a>
+    </div>
+    <div class="content">
+        <h2>Calories Burned</h2>
+        <p>Based on the provided data, the estimated calories burned are: <strong>{{ prediction }}</strong> kcal. for <strong>{{ duration }}</strong>minutes</p>
+    <img src="{{ url_for('static', filename='cal-res.png') }}" alt="Exercises Image" class="main-img">
+    </div>
+</body>
+</html>
